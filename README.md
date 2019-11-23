@@ -8,8 +8,12 @@ My boyfriend and I live in a small, shoebox apartment in NYC. We don't have much
 
 This repo uses the Met Museum API combined with Google Arts & Culture to beautify our blank screens.
 
-# Prerequisites
+# Packages & setup 
 
-More info to come....
+Python 3.7, tkinter, pillow 
+
+Only tested on Fedora 29 workstation
+
+## More info to come....
 
 
