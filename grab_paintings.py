@@ -19,13 +19,13 @@ resp_dict = json.loads(resp.content)
 
 
 for obj_id in resp_dict['objectIDs']:
-    obj_resp = requests.get(met_endpoints['object']['endpoint'].format(obj_id=obj_id))
-    obj_dict = json.loads(obj_resp.content)
-    print(obj_id, obj_dict['title'])
-
-    img_url = obj_dict['primaryImage']
-    img_resp = requests.get(img_url)
     try:
+        obj_resp = requests.get(met_endpoints['object']['endpoint'].format(obj_id=obj_id))
+        obj_dict = json.loads(obj_resp.content)
+        print(obj_id, obj_dict['title'])
+
+        img_url = obj_dict['primaryImage']
+        img_resp = requests.get(img_url)
         img = Image.open(BytesIO(img_resp.content))
         img_title = '_'.join(obj_dict['title'].lower().split(' ')) + '.jpeg'
         img.save(output_dir + img_title, 'jpeg')
