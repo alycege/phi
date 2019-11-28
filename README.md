@@ -10,7 +10,18 @@ This project uses the Met Museum API combined with Google Arts & Culture to beau
 
 ## Packages & setup 
 
-Python 3.7: tkinter, pillow, requests 
+Requires python 3.7 & several compatible packages: tkinter, pillow, requests. Display using eog.
+
+To run: first grab all images using a search query 
+```
+python grab_paintings.py
+search query: <input art movement>
+```
+
+Then to display:
+```
+source beautify.sh <input art movement>
+```
 
 Only tested on Fedora 29 workstation
 
