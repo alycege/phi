@@ -6,6 +6,7 @@ IMG="$IMG_DIR/*"
 echo $IMG_DIR
 
 for file in $IMG; do {
+    echo $file
     eog -fsw $file
     sleep 2s
 }
